@@ -6,7 +6,10 @@ int increment;
 /* Required by the unity test framework */
 void setUp(){}
 /* Required by the unity test framework */
-void tearDown(){}
+void tearDown()
+{
+    
+}
 
 void test_insert1(void)
 {
