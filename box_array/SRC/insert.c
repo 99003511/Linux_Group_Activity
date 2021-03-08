@@ -14,8 +14,7 @@ printf("increment %d\n",increment);
   printf("inc %d\n",increment);
   
  }
- 
- 
+
 
  
  b2->length=update_length;
