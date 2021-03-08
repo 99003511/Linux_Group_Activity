@@ -1,4 +1,6 @@
 #include "main.h"
+
+
 int increment;
 float max_height(struct box *ptr)
 {
