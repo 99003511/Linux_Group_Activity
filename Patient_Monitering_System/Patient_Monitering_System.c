@@ -59,12 +59,7 @@ void Alert_Doctor()
 		
 
    
-void sighup() 
-  
-{ 
-    signal(SIGHUP, sighup); //reset signal
-    printf("Doctor has been alerted\n"); 
-} 
+
   
 void sigint() 
   
@@ -77,7 +72,14 @@ void sigquit()
 { 
     printf("Treatment complete\n"); 
 
-}  
+} 
+
+void sighup() 
+  
+{ 
+    signal(SIGHUP, sighup); //reset signal
+    printf("Doctor has been alerted\n"); 
+} 
 	
 
  
@@ -113,7 +115,7 @@ void* patient1(void* pv)
 {
 	sem_wait(&s1);
 	pthread_mutex_lock(&m1);
-	char str[]= "Rakesh";
+	char str[]= "Suraj";
 	int IDn= 785;
 	printf("Patient name : %s \n Patient ID : %d", str,IDn);
 	CheckVitals(15,65);
@@ -131,7 +133,7 @@ void* patient2(void* pv)
 {
 	sem_wait(&s2);
 	pthread_mutex_lock(&m1);
-	char str[]= "Vijay";
+	char str[]= "Vinay";
 	int IDn= 788;
 	printf("Patient name : %s \n Patient ID : %d", str,IDn);
 	CheckVitals(10,110);
@@ -148,7 +150,7 @@ void* patient3(void* pv)
 {
 	sem_wait(&s3);
 	pthread_mutex_lock(&m1);
-	char str[]= "Vikram";
+	char str[]= "Reeshav";
 	int IDn= 790;
 	printf("Patient name : %s \n Patient ID : %d", str,IDn);
 	CheckVitals(25,50);
@@ -166,7 +168,7 @@ void* patient4(void* pv)
 {
 	sem_wait(&s4);
 	pthread_mutex_lock(&m1);
-	char str[]= "Ajay";
+	char str[]= "Rajath";
 	int IDn= 795;
 	printf("Patient name : %s \n Patient ID : %d", str,IDn);
 	CheckVitals(14,80);
